@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'animate.css';
+
+
+$primary: #4c4f53 ;
+$secondary: #6E7173;
+$tertiary: #D2D7D9;
+$fourth:  #757c7c ;
+
+
+table, th, tr, td{
+  border: none !important;
+}
+
+.container {
+  font-family: 'Open Sans', sans-serif;
+  h1 {
+    font-weight: 300;
+    color: $primary;
+  }
+  th{
+    font-weight: 300;
+    color: $secondary;
+  }
+}
+
+table{
+  th,td{
+    padding: 5px 20px 5px 0px;
+  }
+}
+.pr{
+  padding-left: 15px;
+}
+
+.primary{
+  color: $primary !important;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  th{
+    text-align: left;
+    cursor: pointer;
+  }
+  i{
+    color: #d54b4b;
+  }
+  td{
+    color: $fourth;
+    font-size: 0.8em;
+    &.name{
+      font-weight: bold;
+    }
+    &.number{
+      font-size: 1.3em;
+      &.total{
+        color: $primary;
+      }
+      &.total2{
+        color: $fourth;
+      }
+    }
+    &.percentage{
+      font-weight: bold;
+    }
+    &.border{
+      border-right: 1px solid $tertiary !important;
+    }
+    &.active{
+      color: $primary !important;
+      animation: fadeIn;
+      animation-duration: 1s;
+    }
+  }
+  .text-right{
+    text-align: right !important;
+  }
+
+  tfoot>tr{
+    td{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
